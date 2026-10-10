@@ -86,7 +86,7 @@
 (() => {
   const $ = id => document.getElementById(id);
   const length = $('length'), edge = $('edge'), count = $('count');
-  const fmt = n => Number(n).toLocaleString('nl-BE', { maximumFractionDigits: 2 });
+  const fmt = n => Math.round(Number(n)).toLocaleString('nl-BE', { maximumFractionDigits: 0 });
   let countManuallyEdited = false;
 
   function getSuggestedCount(L, E) {
